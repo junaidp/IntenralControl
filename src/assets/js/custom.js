@@ -12,7 +12,7 @@ $(document).ready(function() {
         }
     });
     var add_buttonmultiple = $(".add_field_buttonmultiple"); //Add button ID
-    debugger
+
     var x = 3; //initlal text box count
     $(add_buttonmultiple).click(function(e) { //on add input button click
         e.preventDefault();
@@ -168,4 +168,54 @@ $('.boxx').click(function() {
         height: '60px',
         width: '100%'
     })
+});
+$(document).ready(function() {
+    $('.flexslider').flexslider();
+    $("#flexiselDemo4").flexisel({
+        visibleItems: 6,
+        animationSpeed: 1000,
+        autoPlay: false,
+        autoPlaySpeed: 3000,
+        pauseOnHover: true,
+        reverse: false,
+        startAt: 0,
+        move: 0,
+        enableResponsiveBreakpoints: true,
+        responsiveBreakpoints: {
+            portrait: {
+                changePoint: 480,
+                visibleItems: 1
+            },
+            landscape: {
+                changePoint: 640,
+                visibleItems: 2
+            },
+            tablet: {
+                changePoint: 960,
+                visibleItems: 3
+            }
+        }
+    });
+    $("#flexiselDemo5").flexisel({
+        visibleItems: 6,
+        animationSpeed: 1000,
+        autoPlay: false,
+        autoPlaySpeed: 3000,
+        pauseOnHover: true,
+        enableResponsiveBreakpoints: true,
+        responsiveBreakpoints: {
+            portrait: {
+                changePoint: 480,
+                visibleItems: 1
+            },
+            landscape: {
+                changePoint: 640,
+                visibleItems: 2
+            },
+            tablet: {
+                changePoint: 960,
+                visibleItems: 3
+            }
+        }
+    });
 });

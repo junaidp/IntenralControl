@@ -61,11 +61,13 @@ p {
 }
 
 .nbs-flexisel-nav-left {
-    left: 0px;
-    background: url(../img/slider1.png) no-repeat;
+    background: url(../img/slide.png) no-repeat;
+    top: -17px !important;
+    right: 21px !important;
 }
 
 .nbs-flexisel-nav-right {
     right: 0px;
-    background: url(../img/slider.png) no-repeat;
+    top: -17px !important;
+    background: url(../img/slide1.png) no-repeat;
 }

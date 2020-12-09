@@ -16,14 +16,15 @@ declare var $: any
 export class NavbarComponent implements OnInit {
   addUSerOption = false;
   signUpUserName = "";
-  signUpEmail = "";
-  signUpCity = "";
-  signUpCurency ="";
-  signUpPassword = "";
-  signUpRepeatPassword = "";
-  signUpUserType = "";
-  signUpContact = "";
-  signUpAddress = "";
+  companyName = "";
+  // signUpEmail = "";
+  // signUpCity = "";
+  // signUpCurency ="";
+  // signUpPassword = "";
+  // signUpRepeatPassword = "";
+  // signUpUserType = "";
+  // signUpContact = "";
+  //signUpAddress = "";
   signUpCompany ;
   
   constructor(public globals: Globals ,public authService: AuthService ,private router: Router, public Signupservice: Signupservice , private spinner: NgxSpinnerService) {
@@ -65,7 +66,7 @@ export class NavbarComponent implements OnInit {
 
  private setSignUpFormData() {
   
-    this.signUpUserType = "individual";
+    //this.signUpUserType = "individual";
 
 
   // if(this.globals.paymentSchedule == "trial"){
@@ -73,23 +74,23 @@ export class NavbarComponent implements OnInit {
   // }
 
   return {
-    name: this.signUpUserName,
-    email: this.signUpEmail,
-    city: this.signUpCity,
-    contactNumber: this.signUpContact,
-    companyAddress: this.signUpAddress,
-    currency: this.signUpCurency,
-    userType: this.signUpUserType,
-    password: this.signUpPassword,
-    confirmpassword: this.signUpRepeatPassword,
-    paymentSchedule: this.globals.paymentSchedule,
-    companyId: localStorage.getItem('companyId')
+    companyName : this.companyName ,
+   //email: this.signUpEmail,
+    //city: this.signUpCity,
+    //contactNumber: this.signUpContact,
+    //companyAddress: this.signUpAddress,
+    // currency: this.signUpCurency,
+    // userType: this.signUpUserType,
+    // password: this.signUpPassword,
+    // confirmpassword: this.signUpRepeatPassword,
+    //paymentSchedule: this.globals.paymentSchedule,
+    userId: localStorage.getItem('userId')
   };
 }
 
   ngOnInit() {
     
-    this.signUpCompany = this.globals.companyId;
+    this.signUpCompany = this.globals.userId;
 
     if(localStorage.getItem('userType') == "company" ){
       $('#addUSerOption').show();
