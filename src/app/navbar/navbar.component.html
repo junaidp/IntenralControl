@@ -58,7 +58,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <!-- <a class="dropdown-item" routerLink="/login">Log In</a> -->
-                        <a id="myBtn" class="dropdown-item">Add New User</a>
+                        <a id="myBtn" class="dropdown-item">Add New Company</a>
                         <a class="dropdown-item" href="javascript:void(0);" (click)="logout()">Log Out</a>
                         <!-- <a class="dropdown-item" routerLink="/signup">Sign In</a> -->
                     </div>
@@ -76,11 +76,9 @@
                 </div>
             </div>
             <div class="row">
-
                 <div class="col-12">
                     <div class="row" id="companyAddUserResponcePanel"></div>
                     <form>
-
                         <div class="form-group">
                             <label for="exampleInputEmail1">UserName</label>
                             <input type="text" class="form-control" id="exampleInputUserName" name="companyName " [(ngModel)]="companyName " aria-describedby="emailHelp" placeholder="Enter email">
