@@ -68,25 +68,27 @@
     </div>
 </nav>
 <div id="myModal" class="modall">
-    <div class="modal-content">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <span class="closee" onclick="$('#myModal').hide();">&times;</span>
+    <div class="modal-dialog" role="document">
+        <div class="modal-content pb-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <span class="closee" onclick="$('#myModal').hide();">&times;</span>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="row" id="companyAddUserResponcePanel"></div>
-                    <form>
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">UserName</label>
-                            <input type="text" class="form-control" id="exampleInputUserName" name="companyName " [(ngModel)]="companyName " aria-describedby="emailHelp" placeholder="Enter email">
-                        </div>
-                        <input type="text" class="form-control" name="userId" [(ngModel)]="userId" id="exampleCompany" placeholder="Company">
-
-                        <button type="submit" class="btn btn-primary" (click)="SignUp()">Submit</button>
-                    </form>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row" id="companyAddUserResponcePanel"></div>
+                        <form>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="exampleInputUserName" name="companyName " [(ngModel)]="companyName " aria-describedby="emailHelp" placeholder="Company Name">
+                            </div>
+                            <input type="hidden" readonly class="form-control" name="userId" [(ngModel)]="userId" id="exampleCompany" placeholder="Company">
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary" (click)="SignUp()">Submit</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

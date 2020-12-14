@@ -49,16 +49,17 @@ export class NavbarComponent implements OnInit {
         console.log(response.data)
         alert(response.data);
        var msg = '<div class="alert alert-info"  role="alert" >'+response.data +'</div>';
-
-        $('#companyAddUserResponcePanel').html(msg);
-        $('html, body').animate({
-          'scrollTop' : $("#companyAddUserResponcePanel").offset().top
-      });
-        setTimeout(function () {
-          $('#companyAddUserResponcePanel .alert').slideToggle();
-        }, 6000);
+       this.router.navigate(['/home']);  
+       window.location.assign("/home")
+        //$('#companyAddUserResponcePanel').html(msg);
+        // $('html, body').animate({
+        //   'scrollTop' : $("#companyAddUserResponcePanel").offset().top
+        // });
+        // setTimeout(function () {
+        //   $('#companyAddUserResponcePanel .alert').slideToggle();
+        // }, 6000);
         //$('#infoMessage span').text(JSON.stringify(response.data));
-    //    this.router.navigate(['/login']);  
+        //this.router.navigate(['/home']);  
      });
    
  }
