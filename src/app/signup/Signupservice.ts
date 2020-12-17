@@ -12,7 +12,8 @@ export class Signupservice {
 
   async SignUp(data) {
 
-    const url = this.globals.APP_URL+"saveCompany";
+    const url = this.globals.APP_URL+"api/saveCompany";
+    //const url = this.globals.APP_URL+"project/saveProject";
      const response = await axios.post(url,data).then(
     );
     console.log(response);

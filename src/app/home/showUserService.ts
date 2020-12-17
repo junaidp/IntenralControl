@@ -13,7 +13,8 @@ export class ShowUserService {
   async showUser(data) {
     console.log(data)
     var  userId = localStorage.getItem('userId')
-    const url = this.globals.APP_URL+" getUserCompanies?userId=" +userId;
+    const url = this.globals.APP_URL+"api/getUserCompanies?userId=" +userId;
+    //const url = this.globals.APP_URL+"project/getProjects?userId=" +userId + "&companyId=" +0;
      const response = await axios.get(url,data).then(
     );
     console.log(response);

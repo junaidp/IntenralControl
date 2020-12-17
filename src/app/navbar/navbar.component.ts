@@ -16,6 +16,8 @@ declare var $: any
 export class NavbarComponent implements OnInit {
   addUSerOption = false;
   signUpUserName = "";
+  //companyId = "0";
+  projectName = "";
   companyName = "";
   // signUpEmail = "";
   // signUpCity = "";
@@ -37,7 +39,7 @@ export class NavbarComponent implements OnInit {
     this.spinner.show();
     this.signUpCompany = localStorage.getItem('companyId')
     if(this.signUpCompany ==null || this.signUpCompany == 0){
-      this.logout();
+     this.logout();
     }
     
     // var hide = divLoader();
@@ -75,7 +77,9 @@ export class NavbarComponent implements OnInit {
   // }
 
   return {
-    companyName : this.companyName ,
+    //companyId : this.companyId ,
+    companyName : this.companyName,
+    //projectName : this.projectName,
    //email: this.signUpEmail,
     //city: this.signUpCity,
     //contactNumber: this.signUpContact,

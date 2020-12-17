@@ -10,14 +10,14 @@ export class Loginservice {
     
   }
   async signIn(data) {
-    const url = this.globals.APP_URL+"signIn";
+    const url = this.globals.APP_URL+"api/signIn";
      const response = await axios.post(url, data).then(
     );
     return response;
   }
 
   async getUserData(data) {
-    const url = this.globals.APP_URL+"/data/getData";
+    const url = this.globals.APP_URL+"api/data/getData";
      const response = await axios.post(url, data).then(
     );
     return response;
